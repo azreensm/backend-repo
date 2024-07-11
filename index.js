@@ -1,15 +1,18 @@
 const express = require("express");
 const app = express();
+const dotenv = require("dotenv");
 const { getUsers, updateUser } = require("./controller/users");
 const authMiddleWare = require("./middleware/authMiddleware");
-const port = 3000;
+const port = process.env.PORT;
 
+// to test api with authentication
 const testApi = require("./test-client/testApi");
 
 app.use(express.json());
+dotenv.config();
 
-// enable to test api with authentication
-// testApi();
+// to test api with authentication
+testApi();
 
 app.get('/', (req, res) => {
     res.send('This is eBuddy tech assessment');
