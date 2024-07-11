@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const dotenv = require("dotenv");
+const dotenv = require("dotenv").config();
 const { getUsers, updateUser } = require("./controller/users");
 const authMiddleWare = require("./middleware/authMiddleware");
 const port = process.env.PORT;
@@ -9,7 +9,6 @@ const port = process.env.PORT;
 const testApi = require("./test-client/testApi");
 
 app.use(express.json());
-dotenv.config();
 
 // to test api with authentication
 testApi();
