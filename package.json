@@ -1,0 +1,21 @@
+{
+  "name": "backend-repo",
+  "version": "1.0.0",
+  "description": "This is Ebuddy tech assessment",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "author": "Azreen Syazwani",
+  "license": "ISC",
+  "devDependencies": {
+    "axios": "^1.7.2",
+    "express": "^4.19.2",
+    "firebase": "^10.12.3",
+    "firebase-admin": "^12.2.0",
+    "jsonwebtoken": "^9.0.2",
+    "nodemon": "^3.1.4"
+  }
+}
