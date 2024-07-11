@@ -1,10 +1,10 @@
-// testApi.js
 const axios = require('axios');
 const getIdToken = require('./getIdToken');
 
+
 const testApi = async () => {
-  const email = 'test@example.com'; // Your test user's email
-  const password = 'pass123';   // Your test user's password
+  const email = process.env.TEST_EMAIL; 
+  const password = process.env.TEST_PASSWORD; 
 
   try {
     const idToken = await getIdToken(email, password);
